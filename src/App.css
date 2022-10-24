@@ -7,3 +7,29 @@
 .xlarge-font {
   font-size: 3rem;
 }
+.bg-image {
+  background-image: url("../public/image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #0b5570;
+}
+.bg-blur {
+  background-color: hsla(0, 0%, 70%, 0.7);
+  margin-top: 30vh;
+  padding-bottom: 5%;
+}
+.pb-large {
+  padding-bottom: 30%;
+}
+.text-blue {
+  color: #0b5570 !important;
+}
+.btn-primary {
+  --bs-btn-bg: #0b5570 !important;
+}
+.text-orange {
+  color: #fd9900 !important;
+}
+.btn-warning {
+  --bs-btn-bg: #fd9900 !important;
+}
