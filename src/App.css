@@ -19,7 +19,7 @@
   padding-bottom: 5%;
 }
 .pb-large {
-  padding-bottom: 30%;
+  padding-bottom: 25%;
 }
 .text-blue {
   color: #0b5570 !important;
@@ -32,4 +32,9 @@
 }
 .btn-warning {
   --bs-btn-bg: #fd9900 !important;
+}
+.line {
+  background-color: #0b5570 !important;
+  height: 5px;
+  width: 17%;
 }

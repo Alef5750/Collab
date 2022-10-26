@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="col-4"></div>
             <nav className="nav xlarge-font justify-content-between col-4 mt-5">
               <FontAwesomeIcon
-                className="nav-link"
+                className="nav-link text-dark"
                 icon={["fab", "facebook"]}
               />
               <FontAwesomeIcon
@@ -55,7 +55,7 @@ const Footer = () => {
                 icon={["fab", "instagram"]}
               />
               <FontAwesomeIcon
-                className="nav-link"
+                className="nav-link text-dark"
                 icon={["fab", "linkedin"]}
               />
             </nav>
