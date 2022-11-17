@@ -1,3 +1,6 @@
+* {
+  font-family: Poppins;
+}
 .underline:hover {
   text-decoration: underline;
 }
@@ -23,6 +26,9 @@
 }
 .text-blue {
   color: #0b5570 !important;
+}
+.text-bold {
+  font-weight: 500 !important;
 }
 .btn-primary {
   --bs-btn-bg: #0b5570 !important;
