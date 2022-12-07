@@ -36,7 +36,7 @@ class Navbar extends Component {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link text-blue text-bold" to="/Login">
+            <NavLink className="nav-link text-blue text-bold" to="/login">
               Sign up / Log in
             </NavLink>
           </li>
