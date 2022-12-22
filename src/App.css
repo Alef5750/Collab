@@ -1,5 +1,6 @@
 * {
   font-family: Poppins;
+  color: #0b5570
 }
 .underline:hover {
   text-decoration: underline;
@@ -43,4 +44,20 @@
   background-color: #0b5570 !important;
   height: 5px;
   width: 17%;
+}
+
+.signup-login-layout {
+  padding: 70px 100px;
+}
+
+.signup-login-box {
+  box-shadow: 0px 0px 10px 0px #0B55704D;
+  padding: 48px 100px;
+}
+
+.signup-login-btn {
+  background-color: none;
+  border: none;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
