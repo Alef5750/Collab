@@ -9,10 +9,12 @@ export default function SignupOrLogin() {
       setView("signup");
     } else setView("login");
   };
+
   return (
     <div className="signup-login-layout">
       <div className="signup-login-box">
         <Titles view={view} />
+        <SignupOrLoginForm view={view} />
         <BottomSection view={view} toggleView={toggleView} />
       </div>
     </div>
@@ -36,6 +38,58 @@ const Titles = ({ view }) => {
       <h2>{subtitle}</h2>
       <h3>{directions}</h3>
     </div>
+  );
+};
+
+const SignupOrLoginForm = ({ view }) => {
+  const formFields = {
+    email: {
+      value: "",
+      type: "email",
+      label: "Your email address",
+      placeholder: "myemail@email.com",
+    },
+    password: {
+      value: "",
+      type: "password",
+      label: "Your password",
+      placeholder: "Password",
+    },
+    firstName: {
+      value: "",
+      type: "text",
+      label: "",
+      placeholder: "First name",
+    },
+    lastName: {
+      value: "",
+      type: "text",
+      label: "",
+      placeholder: "Last name",
+    },
+  };
+
+  const InputElements = ({ formFields }) => {
+    console.log(formFields);
+    for (const field in formFields) {
+      <input
+        type={field.type}
+        className="form-control"
+        placeholder={field.placeholder}
+        aria-label={field.label}
+        value={field.value}
+      />;
+    }
+  };
+
+  return (
+    <form action="">
+      <div className="row">
+        <div className="col">
+          <InputElements formFields={formFields} />
+        </div>
+      </div>
+    </form>
   );
 };
 
