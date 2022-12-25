@@ -4,7 +4,11 @@ import "bootstrap/dist/css/bootstrap.css";
 export default function SignupOrLogin() {
   const [view, setView] = useState("login");
 
-  const toggleView = () => {};
+  const toggleView = (view) => {
+    if (view === "login") {
+      setView("signup");
+    } else setView("login");
+  };
   return (
     <div className="signup-login-layout">
       <div className="signup-login-box">
