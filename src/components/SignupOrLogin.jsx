@@ -42,36 +42,42 @@ const Titles = ({ view }) => {
 };
 
 const SignupOrLoginForm = ({ view }) => {
-  const formFields = [
+  let formFields = [
     {
       name: "email",
-      value: "",
+      defaultValue: "",
       type: "email",
       label: "Your email address",
       placeholder: "myemail@email.com",
     },
     {
       name: "password",
-      value: "",
+      defaultValue: "",
       type: "password",
       label: "Your password",
       placeholder: "Password",
     },
     {
       name: "firstName",
-      value: "",
+      defaultValue: "",
       type: "text",
       label: "",
       placeholder: "First name",
     },
     {
       name: "lastName",
-      value: "",
+      defaultValue: "",
       type: "text",
       label: "",
       placeholder: "Last name",
     },
   ];
+
+  if (view === "login") {
+    formFields = formFields.filter(
+      (field) => field.name === "email" || field.name === "password"
+    );
+  }
 
   return (
     <form action="">
@@ -85,6 +91,7 @@ const SignupOrLoginForm = ({ view }) => {
                 placeholder={field.placeholder}
                 aria-label={field.label}
                 value={field.value}
+                key={field.name}
               />
             );
           })}
