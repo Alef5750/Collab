@@ -35,7 +35,7 @@ const Titles = ({ view }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      <h2 className="my-4">{subtitle}</h2>
       <h3>{directions}</h3>
     </div>
   );
@@ -87,7 +87,7 @@ const SignupOrLoginForm = ({ view }) => {
             return (
               <input
                 type={field.type}
-                className="form-control"
+                className="form-control mt-3"
                 placeholder={field.placeholder}
                 aria-label={field.label}
                 value={field.value}
