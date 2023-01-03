@@ -11,7 +11,7 @@ class Home extends Component {
       <React.Fragment>
         <div className="border-primary bg-image pb-large">
           <div className="col-12 p-5"></div>
-          <div className="bg-blur col-10 mx-auto">
+          <div className="bg-blur col-10 pt-5 mx-auto">
             <h1 className="text-center align-middle">
               Practice your skills. Collaborate. Gain experience.
             </h1>
@@ -193,7 +193,7 @@ class Home extends Component {
               className="text-blue text-center team"
               icon={solid("swatchbook")}
             />
-            <h3>
+            <h3 className="mt-2">
               <b className="text-blue text-center">GAIN EXPERIENCE</b>
             </h3>
             <p className="text-blue text-center">
