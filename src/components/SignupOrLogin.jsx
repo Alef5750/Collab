@@ -44,20 +44,6 @@ const Titles = ({ view }) => {
 const SignupOrLoginForm = ({ view }) => {
   let formFields = [
     {
-      name: "email",
-      defaultValue: "",
-      type: "email",
-      label: "Your email address",
-      placeholder: "myemail@email.com",
-    },
-    {
-      name: "password",
-      defaultValue: "",
-      type: "password",
-      label: "Your password",
-      placeholder: "Password",
-    },
-    {
       name: "firstName",
       defaultValue: "",
       type: "text",
@@ -71,6 +57,20 @@ const SignupOrLoginForm = ({ view }) => {
       label: "",
       placeholder: "Last name",
     },
+    {
+      name: "email",
+      defaultValue: "",
+      type: "email",
+      label: "Your email address",
+      placeholder: "myemail@email.com",
+    },
+    {
+      name: "password",
+      defaultValue: "",
+      type: "password",
+      label: "Your password",
+      placeholder: "Password",
+    },
   ];
 
   if (view === "login") {
@@ -82,7 +82,25 @@ const SignupOrLoginForm = ({ view }) => {
   return (
     <form action="">
       <div className="row">
-        <div className="col">
+        <label for="firstName">Your full name</label>
+        <span className="d-flex gap-3">
+          <input
+            type="text"
+            className="form-control p-2 border-blue mr-1"
+            placeholder="First name"
+            value=""
+            name="firstName"
+            key="firstName"
+          />
+          <input
+            type="text"
+            className="form-control p-2 border-blue"
+            placeholder="Last name"
+            value=""
+            key="lastName"
+          />
+        </span>
+        {/* <div className="col">
           {formFields.map((field) => {
             return (
               <input
@@ -95,7 +113,7 @@ const SignupOrLoginForm = ({ view }) => {
               />
             );
           })}
-        </div>
+        </div> */}
       </div>
     </form>
   );
