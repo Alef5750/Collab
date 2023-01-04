@@ -16,6 +16,7 @@ export default function SignupOrLogin() {
       <div className="signup-login-box">
         <Titles view={view} />
         <SignupOrLoginForm view={view} />
+        <SocialMediaSection />
         <BottomSection view={view} toggleView={toggleView} />
       </div>
     </div>
@@ -114,6 +115,16 @@ const SignupOrLoginForm = ({ view }) => {
         {view === "login" ? "Login" : "Sign up"}
       </button>
     </form>
+  );
+};
+
+const SocialMediaSection = () => {
+  return (
+    <span className="d-flex">
+      <span className="border-bottom border-blue border-2 w-100 mb-3" />
+      <span className="px-3 pb-1">or</span>
+      <span className="border-bottom border-blue border-2 w-100 mb-3" />
+    </span>
   );
 };
 
