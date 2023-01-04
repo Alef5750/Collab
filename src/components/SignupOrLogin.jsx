@@ -110,7 +110,7 @@ const SignupOrLoginForm = ({ view }) => {
           );
         })}
       </div>
-      <button className="btn btn-warning text-light align-self-end mt-5 px-4">
+      <button className="btn btn-warning text-light align-self-end mt-5 px-4 text-uppercase">
         {view === "login" ? "Login" : "Sign up"}
       </button>
     </form>
