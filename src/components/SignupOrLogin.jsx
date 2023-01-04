@@ -42,7 +42,7 @@ const Titles = ({ view }) => {
 };
 
 const SignupOrLoginForm = ({ view }) => {
-  let formFields = [
+  let nameFields = [
     {
       name: "firstName",
       defaultValue: "",
@@ -57,63 +57,57 @@ const SignupOrLoginForm = ({ view }) => {
       label: "",
       placeholder: "Last name",
     },
+  ];
+  const otherFields = [
     {
       name: "email",
       defaultValue: "",
       type: "email",
-      label: "Your email address",
+      label: view === "login" ? "Enter your email" : "Your email address",
       placeholder: "myemail@email.com",
     },
     {
       name: "password",
       defaultValue: "",
       type: "password",
-      label: "Your password",
+      label: view === "login" ? "Enter your password" : "Your password",
       placeholder: "Password",
     },
   ];
 
-  if (view === "login") {
-    formFields = formFields.filter(
-      (field) => field.name === "email" || field.name === "password"
-    );
-  }
-
   return (
     <form action="">
-      <div className="row">
-        <label for="firstName">Your full name</label>
-        <span className="d-flex gap-3">
-          <input
-            type="text"
-            className="form-control p-2 border-blue mr-1"
-            placeholder="First name"
-            value=""
-            name="firstName"
-            key="firstName"
-          />
-          <input
-            type="text"
-            className="form-control p-2 border-blue"
-            placeholder="Last name"
-            value=""
-            key="lastName"
-          />
-        </span>
-        {/* <div className="col">
-          {formFields.map((field) => {
-            return (
+      <label>Your full name</label>
+      <div className="d-flex gap-3">
+        {nameFields.map((field) => {
+          return (
+            <div>
               <input
                 type={field.type}
-                className="form-control mt-3"
+                className="form-control p-2 border-blue mr-1"
                 placeholder={field.placeholder}
-                aria-label={field.label}
                 value={field.value}
-                key={field.name}
+                key={field.key}
               />
-            );
-          })}
-        </div> */}
+            </div>
+          );
+        })}
+      </div>
+      <div className="mt-3">
+        {otherFields.map((field) => {
+          return (
+            <div>
+              <label>{field.label}</label>
+              <input
+                type={field.type}
+                className="form-control p-2 border-blue mr-1"
+                placeholder={field.placeholder}
+                value={field.value}
+                key={field.key}
+              />
+            </div>
+          );
+        })}
       </div>
     </form>
   );

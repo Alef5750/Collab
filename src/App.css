@@ -73,7 +73,7 @@
   text-transform: uppercase;
 }
 .border-blue {
-  border: 1px solid #0b5570;
+  border: 1px solid #0b5570 !important;
 }
 .nav-link:hover {
   color: gray !important;
