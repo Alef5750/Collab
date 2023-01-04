@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
 export default function SignupOrLogin() {
   const [view, setView] = useState("login");
@@ -76,7 +77,7 @@ const SignupOrLoginForm = ({ view }) => {
   ];
 
   return (
-    <form action="">
+    <form className="d-flex flex-column" action="">
       <label>Your full name</label>
       <div className="d-flex gap-3">
         {nameFields.map((field) => {
@@ -109,6 +110,9 @@ const SignupOrLoginForm = ({ view }) => {
           );
         })}
       </div>
+      <button className="btn btn-warning text-light align-self-end">
+        {view === "login" ? "Login" : "Sign up"}
+      </button>
     </form>
   );
 };
